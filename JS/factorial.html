@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fact(n)
+        {
+            var f=1;
+            while(n>0)
+            {
+             f*=n;
+             n--;
+            }
+            // document.write("Factorial is : "+ (f));
+            // alert(f);
+             document.getElementsByClassName("facto")[0].innerHTML=f;
+            document.getElementById("fc").innerHTML="Factorial is : " + f;
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <label for="num">Enter Number</label>
+        <input type="number" name="num" id="num">
+        <br>
+        <button onclick="fact(num.value)">Factorial</button>
+    </div>
+    <div class="facto">
+        ..
+    </div>
+    <div id="fc">
+        ..
+    </div>
+</body>
+</html>

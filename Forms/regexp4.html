@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="regexp4.js"></script>
+
+    <style>
+        body {
+            background-image: url("../JSArray/images/back.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .main {
+            margin-top: 200px;
+            /* width: 50%; */
+            text-align: center;
+            margin-left: 250px;
+            /* background-color: gray; */
+            padding: 30px;
+        }
+
+        .box1 {
+            color: aqua;
+            height: 200px;
+            width: 400px;
+            margin-left: 150px;
+            /* background-color: darkseagreen; */
+        }
+
+        input {
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+
+        [type=button] {
+            background-color: gray;
+            color: black;
+            height: 30px;
+            width: 100px;
+            margin-right: 30px;
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <table class="box1">
+
+            <form action="" name="reg">
+
+                <tr>
+
+                    <td><label for="fname">First Name :</label></td>
+                    <td><input type="text" name="fname" id="fname"></td>
+                    <td><span id="fnerr"></span></td>
+                </tr>
+                <tr>
+
+                    <td><label for="flname">Full Name :</label></td>
+                    <td><input type="text" name="flname" id="flname"></td>
+                    <td><span id="flerr"></span></td>
+                </tr>
+                <tr>
+
+                    <td><label for="mobile">Mobile No. :</label></td>
+                    <td><input type="text" name="mobile" id="mobile"></td>
+                    <td><span id="merr"></span></td>
+                </tr>
+                <tr>
+
+                    <td><label for="email">E-Mail :</label></td>
+                    <td><input type="text" name="email" id="email">
+                        <span id="emerr"></span>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td><label for="cname">Course Name :</label></td>
+                    <td><input type="text" name="cname" id="cname">
+                        <span id="cerr"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="SUBMIT" onclick="validate()"></td>
+                </tr>
+            </form>
+
+        </table>
+    </div>
+</body>
+
+</html>

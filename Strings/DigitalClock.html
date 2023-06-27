@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displayTime()
+        {
+            var dt= new Date();
+            var hh=dt.getHours();
+            var mm=dt.getMinutes();
+            var ss=dt.getSeconds();
+
+            if(hh<10)
+             hh="0"+hh;
+            if(mm<10)
+             mm="0"+mm;
+            if(ss<10)
+             ss="0"+ss;
+            document.getElementById("clock").innerHTML="<h2>"+hh+ " : " + mm + " : " + ss+ "</h2>"
+        }
+        setInterval(displayTime,1000);
+    </script>
+</head>
+<body onload="displayTime()">
+    <div id="clock">
+    ...
+    </div>
+</body>
+</html>

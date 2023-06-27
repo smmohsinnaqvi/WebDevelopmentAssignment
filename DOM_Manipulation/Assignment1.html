@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <script>
+        function change()
+        {
+            var arr=document.getElementsByTagName("li");
+            for(i=0;i<arr.length;i++)
+            {
+                var newnode= document.createElement("img")
+                newnode.setAttribute("src", arr[i].innerText +".jpg")
+                arr[i].replaceChild(newnode,arr[i].firstChild);
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li>Desktop</li>
+        <li>MyComputer</li>
+        <li>Folder</li>
+        <li>Browser</li>
+        <li>WordDocument</li>
+    </ul>
+    <button onclick="change()">Click Here</button>
+</body>
+</html>

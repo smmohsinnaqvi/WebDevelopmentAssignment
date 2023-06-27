@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Information</title>
+    <script src="visitor2.js"></script>
+</head>
+
+<body>
+    <table border="1" style="border-collapse: collapse; border: 2px solid black;">
+        <form action="#" method="get" name="f1">
+
+            <tr>
+                <td colspan="2">
+                    <h3>Visitor Information</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>Email Address :</td>
+                <td>
+                    <input type="email" name="mailid" id="email">
+                </td>
+                <td id="e-err"></td>
+            </tr>
+            <tr>
+                <td>Do you use web for :</td>
+                <td>
+                    <input type="checkbox" id="c1" name="c1" value="Research">Research</input>
+                    <input type="checkbox" id="c2" name="c2" value="Purchase">Purchase</input>
+                </td>
+            </tr>
+            <tr>
+                <td>Occupation :</td>
+                <td>
+                    <select name="occ" id="occ">
+                        <option value="">Select Occupation</option>
+                        <option value="Programmer">Programmer</option>
+                        <option value="SalesMan">Salesman</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                </td>
+                <td id="o-err"></td>
+            </tr>
+            <tr>
+                <td>Want us to send junk email ? :</td>
+                <td>
+                    <input type="radio" id="r" name="r" value="Absolutely">Absolutely</input>
+                    <input type="radio" id="r" name="r" value="No,Way Man!">No Way Man!</input>
+                </td>
+                <td id="r-err"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" onclick="validate()" value="SUBMIT" />
+                </td>
+                <td>
+                    <input type="reset" value="RESET">
+                </td>
+            </tr>
+
+        </form>
+    </table>
+</body>
+
+</html>

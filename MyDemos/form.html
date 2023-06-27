@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script>
+        function makeRequest(){
+            ajax=createAjaxObject();
+            if(ajax)
+            alert("ajax created");
+            var url="http://localhost:9000/getname?empid=" + document.f1.empid.value;
+            alert(url);
+            ajax.open("GET",url,true);
+
+            ajax.send("");
+            ajax.onreadystatechange=updatePage;
+        }
+
+        function createAjaxObject(){
+
+            try{
+                var ajax=new XMLHttpRequest();
+                return ajax;
+            }
+            catch(e)
+            {
+                try{
+                    var ajax= new ActiveXObject("Microsoft.XMLHTTP");
+                    return ajax;
+                }
+                catch(e)
+                {
+                    alert("AJAX NOT SUPPORTED");
+                }
+            }
+        }
+        function updatePage(){
+            alert(ajax.readyState)
+            if(ajax.readyState==4)
+            {
+                document.getElementById("emps").innerHTML=responseText;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <form action="#"name="f1" method="get">
+        <label for="empid"></label>
+        <input type="number" name="empid" id="empid">
+
+        <input type="button" value="SUBMIT" onclick="makeRequest()">
+    </form>
+    <div id="emps">
+
+    </div>
+</body>
+</html>

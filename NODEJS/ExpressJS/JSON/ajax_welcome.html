@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                var time = new Date();
+                var hr = time.getHours();
+                var str="";
+                var url="http://localhost:9000/greet";
+                var eno= $("#eid").val();
+                if(hr<=11)
+                str="Good Morning ";
+                else if(hr>11 && hr<15)
+                str="Good Afternoon ";
+                else
+                str="Good Evening ";
+                $.post(url,{empno : eno},function(data,status){
+                    if(status=="success")
+                    {
+                        alert(data);
+                        var emp=JSON.parse(data);
+                        alert(emp);
+                        //for(i=0;i<1;i++)
+                        str+=emp[0].ENAME;
+                    }
+                    $("#grt").text(str);
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <label for="eid"></label>
+    <input type="number" name="eid" id="eid">
+    <input type="button" id="btn" value="Click Here">
+    <div id="grt">
+
+    </div>
+
+</body>
+</html>

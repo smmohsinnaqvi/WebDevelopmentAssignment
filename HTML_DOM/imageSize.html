@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Size</title>
+    <script>
+        function iSize()
+        {
+            var i= document.getElementById("i1");
+            h=i.height;
+            w=i.width;
+            i.height="400"
+            i.width="400"
+        }
+        function oSize()
+        {
+            var i= document.getElementById("i1");
+            i.height=h;
+            i.width=w;
+        }
+    </script>
+</head>
+<body>
+    <img src="../JSArray/images/bane.jpg" id="i1" onmouseover="iSize()" onmouseout="oSize()" height="300px" width="300px">
+</body>
+</html>

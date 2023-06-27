@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(dt)
+        {
+            var dat= new Date(dt);
+            var dd= dat.getDate();
+            var mm = dat.getMonth();
+            var yy= dat.getFullYear();
+
+            document.getElementById("res").innerHTML="<h2> Date : "+dd + " Month : "+mm+" Year : "+yy+"</h2>";
+        }
+        function age(dt)
+        {
+            var dyear=new Date(dt).getFullYear();
+            var cyear=new Date().getFullYear();
+            var dif=cyear-dyear;
+            document.getElementById("res").innerHTML="<h2> AGE IS : " + dif + "</h2>";
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <label for="bdate">Enter DOB :</label>
+        <input type="date" name="bdate" id="bdate">
+        <input type="button" onclick="age(bdate.value)">
+    </div>
+    <div id="res">
+        ..
+    </div>
+</body>
+</html>

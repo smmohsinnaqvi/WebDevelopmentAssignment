@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function fact(n)
+        {
+            var f=1;
+            while(n>0)
+            {
+                f*=n;
+                n--;
+            }
+            return f;
+        }
+        function factTable(n)
+        {
+            var str="";
+            str+="<table border=1>";
+            str+="<tr>"
+            str+="<th>NUMBER</th>";
+            str+="<th>FACTORIAL</th>";
+            str+="</tr>";
+            for(i=1;i<=n;i++)
+            {
+                str+="<tr>";
+                str+="<td>";
+                str+=i;
+                str+="</td>";
+
+                str+="<td>";
+                str+=fact(i);
+                str+="</td>";
+
+                str+="</tr>";
+
+            }
+            str+="</table>"
+            document.getElementById("tab").innerHTML=str;
+        }
+    </script>
+    <style>
+        .main > button{
+            margin-left: 110px;
+        }
+        #tab{
+            margin-left: 75px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main" style="border: 2px solid yellow; height:fit-content; width: 50%;">
+            <button onclick="factTable(10)">Factorial Table</button>
+
+            <div id="tab">
+                ...
+            </div>
+    </div>
+    
+</body>
+</html>

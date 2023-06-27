@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function oddeven(n)
+        {
+            if(n%2==0)
+            document.getElementById("dis").innerHTML="<h3>Number is even :" + n +"</h3>";
+            else
+            document.getElementById("dis").innerHTML="<h3>Number is odd :" + n +"</h3>";
+
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <label for="num">Enter Number :</label>
+        <input type="number" name="num" id="num"/>
+        <br/>
+        <button onclick="oddeven(num.value)">Even Or Odd
+        </button>
+    </div>
+    <div id="dis">
+        ...
+    </div>
+</body>
+</html>

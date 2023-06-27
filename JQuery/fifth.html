@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("button").click(function()
+            {
+                $(this).parent().parent().next().slideToggle();
+            });
+        })
+    </script>
+    <style>
+        table{
+            width: 50%;
+        }
+        table tr{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <table border="1">
+            <tr>
+                <th>Question One Sample Text</th>
+                <td><button class="btn"></button></td>
+            </tr>
+            <tr style="display: none;">
+                <td >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et,
+                    cumque?</td>
+            </tr>
+            <tr>
+                <th>This is Question 2</th>
+                <td><button class="btn"></button></td>
+
+            </tr>
+            <tr style="display: none;">
+                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla,
+                    commodi.</td>
+            </tr>
+            <tr>
+                <th>Another Question Here</th>
+                <td><button class="btn"></button></td>
+            </tr>
+            <tr style="display: none;">
+                <td >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Voluptatem, sunt!</td>
+            </tr>
+            <tr>
+                <th>Sample Heading</th>
+                <td><button class="btn"></button></td>
+            </tr>
+            <tr style="display: none;">
+                <td >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Voluptatem, sunt!</td>
+            </tr>
+            <tr>
+                <th>Sample Question Here</th>
+                <td><button class="btn"></button></td>
+            </tr>
+            <tr style="display: none;">
+                <td >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Voluptatem, sunt!</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

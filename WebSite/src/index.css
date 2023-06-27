@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    background-color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+p{
+    margin-left: 50px;
+    background-color: aliceblue;
+    color: red;
+}
+#head1{
+    background-color: black;
+    height: 80px;
+    width: 100%;
+}
+input[type="search"]{
+    margin-top: 30px;
+}
+sr{
+    color: aliceblue;
+}
+ul{
+    margin: 10px;
+}
+
+ul>li{
+    position: relative;
+    display: inline;
+    margin: 20px;
+}
+li>a{
+    text-decoration: none;
+    font-family: fantasy;
+    color:aliceblue;
+    font-size:30px;
+}
+div#l{
+    width: 15%;
+    height: 700px;
+    background-color: white;
+    float: left;
+}
+div#m{
+    /* position: absolute; */
+    float: left;
+    width: 70%;
+    height: 700px;
+}
+div#r{
+    width: 15%;
+    height: 700px;
+    background-color: white;
+}

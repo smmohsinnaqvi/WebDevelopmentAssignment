@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bank Registration</title>
+    <script src="weblayout2.js"></script>
+</head>
+
+<body>
+    <div style="width:100%;height:100px;background-color:black">
+        <span style="color:white"> First Northen bank </span>
+        <img />
+    </div>
+    <div style="width:20%;height:500px;background-color:red;float:left">
+
+    </div>
+    <div style="width:70%;height:500px;background-color: whitesmoke;float:left">
+        <h2 style="margin: 20px;">New User Registration</h2>
+        <p style="padding: 20px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium officiis praesentium eligendi unde
+            fugit assumenda nostrum veniam deleniti molestiae reiciendis?
+        </p>
+        <form name="reg">
+            <table>
+                <tr>
+                    <td><label for="lname">Last Name : </label></td>
+                    <td> <input type="text" name="lname" id="lname" required/></td>
+                    <td><span id="lerr"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="fname"> First Name :</label></td>
+                    <td><input type="text" name="fname" id="fname" required></td>
+                    <td><span id="ferr"></span></td>
+
+                </tr>
+                <tr>
+                    <td><label for="uid"> Preferred User ID :</label></td>
+                    <td><input type="text" name="uid" id="uid" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email Address :</label></td>
+                    <td><input type="email" name="mailid" id="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="acno">Account Number :</label></td>
+                    <td><input type="number" name="accno" id="acno" required/></td>
+                    <td><span id="aerr"></span></td>
+
+                </tr>
+                <tr>
+                    <td><label for="cno">Credit Card Number :</label></td>
+                    <td><input type="number" name="credno" id="cno" required></td>
+                </tr>
+                <tr>
+                    <td><label for="pwd">Online Password :</label></td>
+                    <td><input type="password" name="pswd" id="pwd" required></td>
+                    <td><span id="strength"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="rpwd">Repeat Password :</label></td>
+                    <td><input type="password" name="rpswd" id="rpwd" required></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="validate()" value="SUBMIT"></td>
+                    <td><input type="reset" value="RESET"></td>
+                </tr>
+                
+
+
+            </table>
+
+
+        </form>
+    </div>
+    <div style="width:10%;height:500px;background-color:red;float:left">
+
+    </div>
+
+
+
+</body>
+
+</html>

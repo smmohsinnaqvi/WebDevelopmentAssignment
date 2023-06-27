@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Assignment 1</title>
+    <script>
+        var jsonstr = '[{"empid":101,"name":"Harry","sal":10000,"dept":10,"isManager":true,"no":811873672624}, {"empid":102,"name":"Rajesh","sal":15000,"dept":20,"isManager":false,"no":811873672624},  {"empid":103,"name":"JJ","sal":20000,"dept":30,"isManager":true,"no":811873672624}]';
+        function displayEmp()
+        {
+            var emp=JSON.parse(jsonstr);
+            //alert(str.length);
+            str="";
+            for(i=0;i<emp.length;i++)
+            {
+                str+="<p> EMPID : " + emp[i].empid + "</p>";
+                str+="<p> NAME : " + emp[i].name +"</p>";
+                str+="<p> SAL : " + emp[i].sal +"</p>";
+                str+="<p> DEPT : " + emp[i].dept +"</p>";
+                str+="<p> IS MANAGER ?  : " + emp[i].isManager +"</p>";
+                str+="<p> MOBILE NO. : " + emp[i].no +"</p>";
+
+            }
+            document.getElementById("emps").innerHTML=str;
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="displayEmp()">DISPLAY EMPLOYEES</button>
+    <div id="emps">
+
+    </div>
+</body>
+
+</html>

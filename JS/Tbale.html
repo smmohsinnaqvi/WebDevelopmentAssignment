@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dispTable(num)
+        {
+            var str="";
+            str+="<table border=1>";
+            for(i=1;i<=10;i++)
+            {
+                str+="<tr>";
+                str+="<td>";
+                str+= num + "*" + i + "=" + (num*i);
+                str+="</td>";
+                str+="</tr>";
+            }
+            str+="</table>"
+
+            document.getElementById("tab").innerHTML=str;
+        }
+    </script>
+    <style>
+        .box{
+            margin-left: 400px;
+            margin-top: 200px;
+            height: fit-content;
+            width: 400px;
+            background-color:gray;
+            text-align: center;
+        }
+        #tab{
+            position: relative;
+            margin-left: 400px;
+        }
+    </style>
+</head>
+<body>     
+     <div class="box" style="background-color: grey;">
+        <label for="num">Enter Number :</label>
+        <input type="number" name="num" id="num"/>
+        <br/>
+        <button onclick="dispTable(num.value)">TABLE</button>
+    </div>
+    <div id="tab">
+
+    </div>
+</body>
+</html>

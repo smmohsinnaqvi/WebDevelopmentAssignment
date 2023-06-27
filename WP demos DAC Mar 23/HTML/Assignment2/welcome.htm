@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .blink{
+            animation: blinker 1s linear infinite;
+            color: blueviolet;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        @keyframes blinker {
+            50%{
+                opacity: 0;
+            }
+            
+        }
+    </style>
+    <title>Welcome</title>
+</head>
+<body>
+    <marquee  >
+       <h1> Welcome</h1>
+    </marquee>
+
+    <marquee direction = "up" >
+        <h1> Welcome</h1>   
+     </marquee>
+     <marquee direction = "right" >
+        <h1> Welcome</h1>
+     </marquee>
+     <marquee direction = "left" >
+        <h1> Welcome</h1>
+     </marquee>
+     <!-- For fast moving -->
+     <marquee direction = "left" scrollamount = "30" > 
+        <h1> Welcome</h1>
+     </marquee>
+     <marquee direction = "down" width ="500 " hight="500 " scrollamount = "10" > 
+        <h1> Welcome</h1>
+     </marquee>
+     <marquee class="blink" scrollamount = "30"><h1>Welcome</h1></marquee>
+     <marquee direction = "up " loop ="2" scrollamount = "30" > 
+        <h1> Welcome</h1>
+     </marquee>
+     <marquee direction = "right " behavior="scrolling" scrollamount = "30" > 
+        <h1> Welcome</h1>
+     </marquee>
+     
+</body>
+</html>

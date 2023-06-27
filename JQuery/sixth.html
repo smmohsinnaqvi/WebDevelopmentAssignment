@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+
+            $("button").click(function ()
+            {
+                $(this).parent().parent().next().hide("slow");
+                $(this).parent().parent().hide("slow");
+            })
+
+        })
+    </script>
+    <style>
+        body{
+            border: 2px solid yellow;
+            width: 40%;
+        }
+        .container{
+            background-color: seagreen;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table>
+
+                <tr>
+                    <th style="float: left;">Sample Heading</th>
+                    <td><button></button></td>
+                </tr>
+                <tr>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ratione!</td>
+                </tr>
+             
+            <tr>
+                <th style="float: left;">Sample Heading</th>
+                <td><button></button></td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ratione!</td>
+            </tr>
+            <tr>
+                <th style="float: left;">Sample Heading</th>
+                <td><button></button></td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ratione!</td>
+            </tr>
+            <tr>
+                <th style="float: left;">Sample Heading</th>
+                <td><button></button></td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ratione!</td>
+            </tr>
+            <tr>
+                <th style="float: left;">Sample Heading</th>
+                <td><button></button></td>
+            </tr>
+            <tr>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ratione!</td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>

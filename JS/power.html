@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function power(m,n)
+        {
+            var p=1;
+            while(n>0)
+            {
+                p*=m;
+                n--;
+            }
+            document.getElementById("t").innerHTML="Power is : " + p;
+        }
+    </script>
+    <style>
+        #t{
+            border: 2px solid black;
+            text-align: center ;
+            width: 345px;
+            height: 100px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="table">
+        <table border="1" style="background-color: tomato;">
+            <tr>
+                <td><label for="base">Enter Base</label></td>
+                <td><input type="number" name="base" id="base"></td>
+            </tr>
+            <tr>
+                <td><label for="exp">Enter Exponent Number</label></td>
+                <td><input type="number" name="exp" id="exp"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button onclick="power(base.value,exp.value)">Power</button>
+                </td>
+            </tr>
+        </table>
+        <div id="t">
+            ..
+        </div>
+    </div>
+</body>
+</html>

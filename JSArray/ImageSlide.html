@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images SlideShow</title>
+    <script>
+
+        var arr = ["./images/batmanlogo.jpg","https://www.youtube.com/embed/Nwxbijhkmk8","./images/first.jpg", "./images/second.jpg", "./images/joker.jpg", "./images/bane.jpg"];
+        index = 0;
+        function next() {
+            index++;
+            if (index == arr.length)
+                index = 0;
+            document.getElementById("ima").src = arr[index];
+        }
+        function prev() {
+            index--;
+            if (index == -1)
+                index = arr.length - 1;
+            document.getElementById("ima").src = arr[index];
+        }
+        setInterval(next,1000);
+    </script>
+    <style>
+        body{
+            background-color: gray;
+        }
+        div{
+            margin-left: 220px;
+        }
+        .main,.vi{
+            background-color: black;
+            width: 50%;
+            border: 2px solid black;
+        }
+        .b{
+            width: fit-content;
+            margin: 10px;
+            margin-left: 350px;
+        }
+        div.b{
+            align-items:center ;
+            background-color: gray;
+        }
+        div>button{
+            margin: 60px;
+        }
+        button{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background-color:black;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="./images/batmanlogo.jpg" alt="batman" id="ima" height="400px" width="100%" />
+
+    </div>
+    <div class="b">
+        <button onclick="prev()" id="b1">PREVIOUS</button>
+        <button onclick="next()" id="b2">NEXT</button>
+    </div>
+    <!-- <iframe style="" width="70%" height="215" src="https://www.youtube.com/embed/bSrm9RXwBaI?autoplay=1&muted=1"></iframe>
+    <iframe src="https://www.youtube.com/embed/sKEH4SXDmAE" frameborder="0"></iframe> -->
+    <!-- <div class="vi">
+        <iframe src="https://www.youtube.com/embed/Nwxbijhkmk8" id="vma" height="400px" width="100%"></iframe>
+    </div> -->
+    
+</body>
+
+</html>

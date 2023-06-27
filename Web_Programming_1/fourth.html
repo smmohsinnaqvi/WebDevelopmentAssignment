@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body style="background-color: black; color: aliceblue;">
+
+    <h1 style="text-align: center;">Java Concepts</h1>
+    <ul style="color: aquamarine">
+        <li><a style="text-decoration: none; color: yellowgreen;" href="#oops">Oops Concepts</a></li>
+        <li><a style="text-decoration: none; color: yellowgreen;" href="#interfaces">Interfaces in Java</a></li>
+        <li><a style="text-decoration: none; color: yellowgreen;" href="#instanceof">Instanceof Operator</a></li>
+        <li><a style="text-decoration: none; color: yellowgreen;" href="#exception">Exception Handling</a></li>
+    </ul>
+
+
+    <iframe style="" width="70%" height="215" src="https://www.youtube.com/embed/bSrm9RXwBaI?autoplay=1&muted=1">
+    </iframe>
+
+    <h3 id="oops" style="color:aquamarine;"> OOPS Concepts</h3>
+    <img src="Java.png" alt="java" height="200px" width="100%">
+    <p>In this page, we will learn about the basics of OOPs. Object-Oriented Programming is a paradigm that provides
+        many concepts, such as inheritance, data binding, polymorphism, etc.
+
+        Simula is considered the first object-oriented programming language. The programming paradigm where everything
+        is represented as an object is known as a truly object-oriented programming language.
+
+        Smalltalk is considered the first truly object-oriented programming language.
+
+        The popular object-oriented languages are Java, C#, PHP, Python, C++, etc.
+
+        The main aim of object-oriented programming is to implement real-world entities, for example, object, classes,
+        abstraction, inheritance, polymorphism, etc.
+
+        OOPs (Object-Oriented Programming System)
+        Object means a real-world entity such as a pen, chair, table, computer, watch, etc. Object-Oriented Programming
+        is a methodology or paradigm to design a program using classes and objects. It simplifies software development
+        and maintenance by providing some concepts:
+
+        Object
+        Class
+        Inheritance
+        Polymorphism
+        Abstraction
+        Encapsulation
+        Apart from these concepts, there are some other terms which are used in Object-Oriented design:
+
+        Coupling
+        Cohesion
+        Association
+        Aggregation
+        Composition
+    </p>
+
+    <h3 id="interfaces" style="color: aquamarine;">Interfaces in Java</h3>
+    <p>
+        An Interface in Java programming language is defined as an abstract type used to specify the behavior of a
+        class. An interface in Java is a blueprint of a behaviour. A Java interface contains static constants and
+        abstract methods.
+
+        The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java
+        interface, not the method body. It is used to achieve abstraction and multiple inheritance in Java. In other
+        words, you can say that interfaces can have abstract methods and variables. It cannot have a method body. Java
+        Interface also represents the IS-A relationship.
+
+        When we decide a type of entity by its behaviour and not via attribute we should define it as an interface.
+
+        Like a class, an interface can have methods and variables, but the methods declared in an interface are by
+        default abstract (only method signature, no body).
+    </p>
+
+    <iframe style="background-color: aliceblue;" src="three.html" width="100%" height="200px"></iframe>
+
+    <h3 id="instanceof" style="color: aquamarine;">InstanceOf Operator in Java</h3>
+    <p>The java instanceof operator is used to test whether the object is an instance of the specified type (class or
+        subclass or interface).
+
+        The instanceof in java is also known as type comparison operator because it compares the instance with type. It
+        returns either true or false. If we apply the instanceof operator with any variable that has null value, it
+        returns false.
+
+        Simple example of java instanceof
+        Let's see the simple example of instance operator where it tests the current class.
+
+        class Simple1{
+        public static void main(String args[]){
+        Simple1 s=new Simple1();
+        System.out.println(s instanceof Simple1);//true
+        }
+        }
+        Test it Now
+        Output:true
+        An object of subclass type is also a type of parent class. For example, if Dog extends Animal then object of Dog
+        can be referred by either Dog or Animal class.
+    </p>
+    <h3 id="exception" style="color: aquamarine;">Exception Handling</h3>
+    <p>
+        The Exception Handling in Java is one of the powerful mechanism to handle the runtime errors so that the normal
+        flow of the application can be maintained.
+
+        In this tutorial, we will learn about Java exceptions, it's types, and the difference between checked and
+        unchecked exceptions.
+
+        What is Exception in Java?
+        Dictionary Meaning: Exception is an abnormal condition.
+
+        In Java, an exception is an event that disrupts the normal flow of the program. It is an object which is thrown
+        at runtime.
+
+        What is Exception Handling?
+        Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException,
+        SQLException, RemoteException, etc.
+
+
+        Advantage of Exception Handling
+        The core advantage of exception handling is to maintain the normal flow of the application. An exception
+        normally disrupts the normal flow of the application; that is why we need to handle exceptions. Let's consider a
+        scenario:
+
+
+    </p>
+
+
+</body>
+
+</html>

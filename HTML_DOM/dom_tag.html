@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM TAG</title>
+    <script>
+        function cTable()
+        {
+            var parr=document.getElementsByTagName("p");
+            str="<table border=1>";
+            for(i=0;i<parr.length;i++)
+            {
+                alert(parr[i].firstChild.nodeValue);
+                str+="<tr>";
+                str+="<td>" + parr[i].nodeName + "</td>";
+                str+="<td>" + parr[i].firstChild.nodeValue + "</td>";
+                str+="</tr>";
+            }
+            str+="</table>";
+            var anode=document.createElement("div");
+            anode.innerHTML=str;
+            //anode.appendChild(cnode);
+            document.body.appendChild(anode);
+
+        }
+
+        function cColor()
+        {
+            var c= document.getElementsByTagName("h1");
+            for(i=0;i<c.length;i++)
+            {
+                c[i].style.color="red";
+                c[i].style.backgroundColor="Black"
+            }
+        }
+        function cText()
+        {
+            alert("text");
+            var t= document.querySelectorAll("[type=text]");
+            for(i=0;i<t.length;i++)
+            {
+                t[i].style.backgroundColor="black";
+                t[i].style.color="white";
+            }
+        }
+        function shadow()
+        {
+            var h = document.getElementById("he");
+            //alert(h.firstChild.nodeValue);
+            h.style.textShadow="10px 10px 10px seagreen";
+        }
+        function unshadow()
+        {
+            var h=document.getElementById("he");
+            //h.style.textShadow="0px 0px 0px white";
+            h.style.textShadow="none";
+        }
+
+        function cRed()
+        {
+            document.body.style.backgroundColor="darkred"
+        }
+        function cGreen()
+        {
+            document.body.style.backgroundColor="seagreen"
+        }
+        function cBlue()
+        {
+            document.body.style.backgroundColor="lightblue"
+        }
+        
+
+    </script>
+   
+</head>
+<body>
+    <h1 onmouseover="shadow()" onmouseout="unshadow()" id="he">HELLO WORLD</h1>
+    <p>This is First para</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+
+    <h1>This is First Heading</h1>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+    <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi.</h1>
+
+    <input type="email" placeholder="email">
+    <input type="text" name="" id="" placeholder="text">
+    <input type="password" placeholder="pwd">
+    <input type="text" placeholder="text">
+    <input type="text" placeholder="text">
+    <button onclick="cText()">Click Here</button>
+    <br>
+
+    <button onclick="cRed()">RED</button>
+    <button onclick="cBlue()">BLUE</button>
+    <button onclick="cGreen()">GREEN</button>
+
+
+</body>
+</html>

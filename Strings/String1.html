@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="String1.js"></script>
+    <style>
+        body{
+            background-color: gray;
+        }
+        .main{
+            margin-left: 300px;
+            margin-top: 20px;
+            width: 50%;
+            background-color: black;
+            color: antiquewhite;
+            border: 2px solid antiquewhite;
+            border-radius: 8px;
+        }
+        .main>div{
+            margin-left: 200px;
+        }
+        #inp{
+            margin-left: 32px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        [type=button]
+        {
+            background-color: cadetblue;
+            font-size: larger;
+            border: 2px solid gray;
+            border-radius: 6px;
+            margin-left: 90px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            
+        }
+        #result{
+            background-color: yellow;
+            width: 30%;
+            margin-left: 440px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align:  center;font-family: Georgia, 'Times New Roman', Times, serif; font-weight: bolder;font-size:40px;text-decoration: underline;">STRING FUNCTIONS</h1>
+    <div class="op">
+        <h3>1. Length Of String</h3>
+        <h3>2. String to UpperCase</h3>
+        <h3>3. String to LowerCase</h3>
+        <h3>4. Index of 'w' in String</h3>
+        <h3>5. Character & ASCII at Index 4 </h3>
+        <h3>6. Concat Strings</h3>
+        <h3>7. Split The String on " " </h3>
+    </div>
+    <div class="main">
+
+        <div class="f">
+            <form action="#" name="f1">
+                <label for="in">Input String</label>
+                <input type="text" name="inp" id="inp">
+                <br>
+                <label for="options">Option Number :</label>
+                <input type="number" name="options" id="options">
+                <br>
+                <input type="button" value="Click Here" onclick="process(inp.value,options.value)">
+            </form>
+        </div>
+    </div>
+    <div id="result">
+        ....
+    </div>
+
+</body>
+
+</html>

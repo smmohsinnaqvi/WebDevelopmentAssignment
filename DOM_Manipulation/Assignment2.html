@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <script>
+        function separate()
+        {
+            var tr= document.getElementsByTagName("tr");
+            for(i=0;i<tr.length;i++)
+            {
+                var divnode=document.createElement("div")
+                var trchild= tr[i].childNodes;
+                for(j=0;j<trchild.length;j++)
+                {
+                    if(trchild[j].nodeName=="TD")
+                    {
+                        divnode.innerHTML+=trchild[j].innerHTML;
+                    }
+                }
+                document.body.appendChild(divnode);
+            }
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td><h3>Cricket</h3></td>
+            <td><img src="images/cricket.jpg" height="200" width="400" alt=""></td>
+            <td><p>Cricket</p><p>Cricket</p><p>Cricket</p><p>Cricket</p><p>Cricket</p><p>Cricket</p><p>Cricket</p></td>
+        </tr>
+        <tr>
+            <td>Football</th>
+            <td><img src="images/football.jpg" height="200" width="400" alt=""></td>
+            <td><p>Football</p><p>Football</p><p>Football</p><p>Football</p><p>Football</p><p>Football</p><p>Football</p></td>
+        </tr>
+
+        <tr>
+            <td>Hockey</td>
+            <td><img src="images/hockey.jpg" height="200" width="400" alt=""></td>
+            <td><p>Hockey</p><p>Hockey</p><p>Hockey</p><p>Hockey</p><p>Hockey</p><p>Hockey</p><p>Hockey</p></td>
+        </tr>
+
+    </table>
+    <button onclick="separate()">Click Here</button>
+</body>
+</html>

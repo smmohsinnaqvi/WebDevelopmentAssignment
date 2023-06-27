@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+
+    <script>
+        var flag, hh, mm, ss;
+        function initClock() {
+            hh = "0" + 0;
+            mm = "0" + 0;
+            ss = "0" + 0;
+            document.getElementById("sclock").innerHTML = "<h2>" + hh + " : " + mm + " : " + ss;
+        }
+
+        function startClock() {
+
+            hh = parseInt(hh);
+            mm = parseInt(mm);
+            ss = parseInt(ss);
+            ss++;
+            if (ss > 59) {
+                ss = 0;
+                mm++;
+            }
+            if (mm > 59) {
+                mm = 0;
+                hh++;
+            }
+            if (hh > 23)
+                hh = 0;
+
+            if (ss < 10)
+                ss = "0" + ss;
+            if (mm < 10)
+                mm = "0" + mm;
+            if (hh < 10)
+                hh = "0" + hh;
+
+            document.getElementById("sclock").innerHTML = "<h2>" + hh + " : " + mm + " : " + ss;
+
+        }
+
+        function start() {
+            flag = setInterval(startClock, 1000);
+        }
+
+        function pauseClock() {
+            clearInterval(flag);
+        }
+
+        function stopClock() {
+            clearInterval(flag);
+            initClock();
+        }
+
+    </script>
+
+</head>
+
+<body onload="initClock()">
+
+    <div id="sclock">
+        ..
+    </div>
+
+    <div class="b">
+        <button onclick="start()">Start</button>
+        <button onclick="pauseClock()">Pause</button>
+        <button onclick="stopClock()">Stop</button>
+
+    </div>
+</body>
+
+</html>

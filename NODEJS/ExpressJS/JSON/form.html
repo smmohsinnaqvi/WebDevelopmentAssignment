@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("#emps").on("click","a",function(){
+                $(this).next().next().slideToggle("slow");
+            })
+
+
+            $("#btn").click(function(){
+                var url="http://localhost:9000/getemps";
+                var dno=$("#dept").val();
+
+                $.post(url,{deptno:dno},function(data,status){
+                    if(status =="success")
+                    {
+                        alert(data);
+                        var emps=JSON.parse(data);
+                        var str="";
+                        for(i=0;i<emps.length;i++)
+                        {
+                            str+="<a href='#'>" + emps[i].EMPNO + "</a><br/>";
+                            str+="<div style='display:none'>"
+                            str+="<p> NAME : " + emps[i].ENAME + "</p>";
+                            str+="<p> JOB : " + emps[i].JOB + "</p>";
+                            str+="<p> SAL : " + emps[i].SAL + "</p>";
+                            str+="<p> MGR : " + emps[i].MGR + "</p>";
+                            str+="<p> COMM : " + emps[i].COMM + "</p>";
+                            str+="<p> DEPT : " + emps[i].DEPTNO + "</p>";
+                            str+="</div>";
+
+                        }
+                        $("#emps").html(str);
+                    }
+                })
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="#" method="post">
+        <label for="dept">DEPT NO : </label>
+        <input type="number" name="dept" id="dept">
+
+        <input type="button" id="btn" value="Show Employees">
+    </form>
+
+    <div id="emps">
+
+    </div>
+</body>
+</html>

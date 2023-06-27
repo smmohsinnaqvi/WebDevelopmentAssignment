@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("a").click(function () {
+                //alert("clicked")
+                $(this).parent().next().slideDown("slow");
+            });
+            $("a.hide").click(function ()
+            {
+                //alert("close");
+                $(this).parent().slideUp("slow");
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="mob">
+            <h3>Samsung S22</h3>
+            <a href="#">View Specification</a>
+        </div>
+        <div id="spec1" style="display: none;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci,
+            suscipit?
+        <a class="hide" href="#">Close</a>
+
+        </div>
+        <div class="mob">
+            <h3>IPhone 14</h3>
+            <a href="#">View Specification</a>
+        </div>
+        <div id="spec2" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda!
+        <a class="hide" href="#">Close</a>
+
+        </div>
+
+        <div class="mob">
+            <h3>Motorola</h3>
+            <a href="#">View Specification</a>
+        </div>
+        <div id="spec3" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda!
+        <a class="hide" href="#">Close</a>
+
+        </div>
+
+        <div class="mob">
+            <h3>Samsung Galaxy Note 10</h3>
+            <a href="#">View Specification</a>
+        </div>
+        <div id="spec4" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda!
+        <a class="hide" href="#">Close</a>
+
+        </div>
+
+        <div class="mob">
+            <h3>Oppo F1</h3>
+            <a href="#">View Specification</a>
+        </div>
+        <div id="spec5" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda!
+        <a class="hide" href="#">Close</a>
+
+        </div>
+
+        <div class="mob">
+            <h3>Iphone SE</h3>
+            <a href="#">View Specification</a>
+        </div>
+        <div id="spec6" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda!
+        <a class="hide" href="#">Close</a>
+        </div>
+
+    </div>
+</body>
+
+</html>
